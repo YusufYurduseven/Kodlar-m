@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bilen Hukuk & Arabuluculuk Bürosu. İstanbul Fatih'te Av. Anas ELAHMED ve Arb. Bilal YURDUSEVEN tarafından kurulan profesyonel hukuk ve arabuluculuk bürosu.">
+    <meta name="keywords" content="Fatih Hukuk Bürosu, Yabancılar Hukuku, Arabuluculuk, İş Hukuku, Ceza Hukuku, Dava Harcı Hesaplama, Yıllık İzin Hesaplama, Araç Değer Kaybı Hesaplama, İstanbul Avukat, Bilen Hukuk">
+    <meta name="author" content="Bilen Hukuk & Arabuluculuk">
+    <title>Bilen Hukuk & Arabuluculuk | Fatih, İstanbul</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Ana Stil Dosyası -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <span class="topbar-item"><i class="fa-solid fa-location-dot"></i> Fatih / İstanbul</span>
+                <a href="tel:+905524093844" class="topbar-item"><i class="fa-solid fa-phone"></i> Arb. Bilal YURDUSEVEN: +90 552 409 38 44</a>
+                <a href="tel:+905372968720" class="topbar-item"><i class="fa-solid fa-phone"></i> Av. Anas ELAHMED: +90 537 296 87 20</a>
+                <a href="mailto:b_ysvn@hotmail.com" class="topbar-item"><i class="fa-solid fa-envelope"></i> b_ysvn@hotmail.com</a>
+            </div>
+            <div class="topbar-right">
+                <span class="status-indicator"><span class="pulse-dot"></span> Çevrimiçi Danışma</span>
+                <span class="topbar-item"><i class="fa-solid fa-scale-balanced"></i> İstanbul Barosu & Arabuluculuk Sicili</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="javascript:void(0)" onclick="navigateToHome()" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="logo-text">
+                    <span class="logo-main">BİLEN</span>
+                    <span class="logo-sub">HUKUK & ARABULUCULUK</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navMenu">
+                <li><a href="javascript:void(0)" onclick="navigateToSection('hakkimizda')">Kurumsal</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateToSection('ekip')">Kurucu Ekibimiz</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateToSection('alanlar')">Faaliyet Alanları</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateToSection('hesaplamalar')">Hesaplama Araçları</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateToSection('sss')">S.S.S.</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateToSection('iletisim')">İletişim</a></li>
+                
+                <!-- DİL SEÇİCİ DROPDOWN -->
+                <li class="lang-switcher-wrapper">
+                    <div class="lang-switcher">
+                        <button class="lang-btn" id="langDropdownBtn" aria-label="Dil Seçimi">
+                            <span class="lang-current-flag" id="currentFlag">🇹🇷</span>
+                            <span id="currentLangLabel">TR</span>
+                            <i class="fa-solid fa-chevron-down lang-arrow"></i>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <div class="lang-dropdown-header">Dil Seçiniz / Select Language</div>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('tr', '🇹🇷', 'TR')" class="lang-item active" data-lang="tr"><span class="lang-flag">🇹🇷</span> <span class="lang-name">Türkçe</span></a>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('en', '🇬🇧', 'EN')" class="lang-item" data-lang="en"><span class="lang-flag">🇬🇧</span> <span class="lang-name">English</span></a>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('ar', '🇸🇦', 'AR')" class="lang-item" data-lang="ar"><span class="lang-flag">🇸🇦</span> <span class="lang-name">العربية</span></a>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('de', '🇩🇪', 'DE')" class="lang-item" data-lang="de"><span class="lang-flag">🇩🇪</span> <span class="lang-name">Deutsch</span></a>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('fr', '🇫🇷', 'FR')" class="lang-item" data-lang="fr"><span class="lang-flag">🇫🇷</span> <span class="lang-name">Français</span></a>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('ru', '🇷🇺', 'RU')" class="lang-item" data-lang="ru"><span class="lang-flag">🇷🇺</span> <span class="lang-name">Русский</span></a>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('fa', '🇮🇷', 'FA')" class="lang-item" data-lang="fa"><span class="lang-flag">🇮🇷</span> <span class="lang-name">فارسی</span></a>
+                            <a href="javascript:void(0)" onclick="setSiteLanguage('es', '🇪🇸', 'ES')" class="lang-item" data-lang="es"><span class="lang-flag">🇪🇸</span> <span class="lang-name">Español</span></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="javascript:void(0)" onclick="navigateToSection('iletisim')" class="btn-randevu-nav"><i class="fa-solid fa-calendar-check"></i> Randevu Al</a></li>
+            </ul>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Mobil Menü">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- =======================================================
+         A. ANA SAYFA GÖRÜNÜMÜ (HOME VIEW)
+         ======================================================= -->
+    <div id="home-view">
+        <!-- HERO BÖLÜMÜ -->
+        <header class="hero-section">
+            <div class="hero-ambient-glow"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Güvenilirlik • Uzman Arabuluculuk • Stratejik Dava Takibi</div>
+                    <h1 class="hero-title">Haklarınızın Korunmasında <span>Kararlı Temsil</span> ve Hızlı Çözümler</h1>
+                    <p class="hero-desc">İstanbul Fatih merkezli ofisimizde; Yabancılar Hukuku başta olmak üzere tüm dava süreçlerinde Av. Anas ELAHMED ile güçlü savunma sağlıyor, uyuşmazlıklarınızı Arb. Bilal YURDUSEVEN ile dava yoluna gitmeden en hızlı şekilde sonuçlandırıyoruz.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="javascript:void(0)" onclick="navigateToSection('alanlar')" class="btn-hero-primary"><i class="fa-solid fa-layer-group"></i> Çalışma Alanlarımız</a>
+                        <a href="javascript:void(0)" onclick="navigateToSection('hesaplamalar')" class="btn-hero-secondary"><i class="fa-solid fa-calculator"></i> Hukuki Hesaplama Araçları</a>
+                    </div>
+                </div>
+
+                <div class="hero-stats-box">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-handshake"></i></div>
+                        <div class="stat-num">Uzman</div>
+                        <div class="stat-label">Dava Şartı Arabuluculuk</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-passport"></i></div>
+                        <div class="stat-num">Yabancılar</div>
+                        <div class="stat-label">Vatandaşlık & İkamet İzni</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-gavel"></i></div>
+                        <div class="stat-num">Genel</div>
+                        <div class="stat-label">Ceza, İş, İcra & Gayrimenkul</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <div class="stat-num">%100</div>
+                        <div class="stat-label">Şeffaf Süreç Yönetimi</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ANA İÇERİK -->
+        <main class="main-wrapper" id="ana-icerik">
+            <div class="content-container">
+                
+                <!-- SOL KOLON -->
+                <div class="content-left">
+                    
+                    <!-- HAKKIMIZDA BÖLÜMÜ -->
+                    <section id="hakkimizda" class="section-block about-preview">
+                        <div class="section-title">
+                            <div class="bar"></div>
+                            <div>
+                                <h2>Hakkımızda</h2>
+                                <p class="section-subtitle-sm">Mesleki etik, şeffaflık ve sonuç odaklı avukatlık anlayışı</p>
+                            </div>
+                        </div>
+                        <p class="about-text-lead">Kocaeli Üniversitesi Hukuk Fakültesi sıralarında temelleri atılan <strong>Bilen Hukuk & Arabuluculuk</strong>, hukukun üstünlüğü ve müvekkil gizliliğini temel prensip edinmiştir.</p>
+                        <p class="about-text-body">Müvekkillerimize yalnızca dava aşamasında değil, uyuşmazlık öncesi önleyici hukuk prensipleriyle de rehberlik ediyoruz. Arb. Bilal Yurduseven'in arabuluculuk konusundaki tecrübesi ile Av. Anas Elahmed'in Yabancılar Hukuku ve genel dava takibi uzmanlığı birleşerek müvekkillerimize tek merkezden entegre hukuki çözüm sağlamaktadır.</p>
+                        
+                        <div class="about-features-grid">
+                            <div class="af-item"><i class="fa-solid fa-circle-check"></i> Mutlak Meslek Sırrı & Gizlilik</div>
+                            <div class="af-item"><i class="fa-solid fa-circle-check"></i> Dava Öncesi Risk Analizi</div>
+                            <div class="af-item"><i class="fa-solid fa-circle-check"></i> Düzenli Raporlama & Şeffaflık</div>
+                            <div class="af-item"><i class="fa-solid fa-circle-check"></i> Hızlı Arabuluculuk Neticeleri</div>
+                        </div>
+                    </section>
+
+                    <!-- FAALİYET ALANLARI (16 ADET) -->
+                    <section id="alanlar" class="section-block">
+                        <div class="section-title-with-actions">
+                            <div class="section-title">
+                                <div class="bar"></div>
+                                <div>
+                                    <h2>Faaliyet Alanlarımız</h2>
+                                    <p class="section-subtitle-sm">Hukuki departmanlarımızı inceleyebilir, doğrudan detaylı bilgi alabilirsiniz.</p>
+                                </div>
+                            </div>
+                            <div class="instant-search-box">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" id="areaSearchInput" placeholder="Faaliyet alanı ara (Örn: Ceza, Yabancılar...)" oninput="filterAreasList()">
+                            </div>
+                        </div>
+
+                        <div class="cards-grid" id="areasContainer">
+                            <div class="action-card" data-id="arabuluculuk" data-keywords="arabuluculuk iş ticaret tüketici">
+                                <div class="card-badge">Öne Çıkan</div>
+                                <div class="card-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                                <h3>Uzman Arabuluculuk</h3>
+                                <p class="card-brief">İş, Ticaret ve Tüketici uyuşmazlıklarında dava şartı ve ihtiyari arabuluculuk.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="yabancilar" data-keywords="yabancılar vatandaşlık ikamet deport çalışma izni">
+                                <div class="card-badge">Öne Çıkan</div>
+                                <div class="card-icon"><i class="fa-solid fa-passport"></i></div>
+                                <h3>Yabancılar Hukuku</h3>
+                                <p class="card-brief">Vatandaşlık işlemleri, ikamet, çalışma izinleri ve deport iptal süreçleri.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="ceza" data-keywords="ceza ağır ceza soruşturma tutuklama asliye">
+                                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <h3>Ceza Hukuku</h3>
+                                <p class="card-brief">Soruşturma, ifade, ağır ceza davaları ve tutukluluğa itiraz süreçleri.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="is" data-keywords="iş hukuku kıdem ihbar işe iade fazla mesai">
+                                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <h3>İş Hukuku</h3>
+                                <p class="card-brief">Kıdem-ihbar tazminatları, iş kazaları, işe iade ve hizmet tespiti davaları.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="idare" data-keywords="idare iptal tam yargı memur ihale">
+                                <div class="card-icon"><i class="fa-solid fa-landmark"></i></div>
+                                <h3>İdare Hukuku</h3>
+                                <p class="card-brief">İdari işlemlerin iptali, tam yargı (tazminat) davaları ve kamu ihaleleri.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="aile" data-keywords="aile boşanma nafaka velayet mal paylaşımı">
+                                <div class="card-icon"><i class="fa-solid fa-people-roof"></i></div>
+                                <h3>Aile ve Boşanma Hukuku</h3>
+                                <p class="card-brief">Anlaşmalı/çekişmeli boşanma, nafaka, velayet ve mal rejimi tasfiyesi.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="gayrimenkul" data-keywords="gayrimenkul kira tahliye tapu izale-i şuyu">
+                                <div class="card-icon"><i class="fa-solid fa-house"></i></div>
+                                <h3>Gayrimenkul Hukuku</h3>
+                                <p class="card-brief">Tahliye davaları, kira tespit, tapu iptal ve tescil ile izale-i şuyu.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="tazminat" data-keywords="tazminat kaza malpraktis haksız fiil değer kaybı">
+                                <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
+                                <h3>Tazminat Hukuku</h3>
+                                <p class="card-brief">Trafik kazası, malpraktis (doktor hatası) ve haksız fiil tazminatları.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="icra" data-keywords="icra iflas çek senet haciz takip">
+                                <div class="card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                                <h3>İcra ve İflas Hukuku</h3>
+                                <p class="card-brief">Çek-senet tahsilatı, ilamlı-ilamsız takipler ve haciz işlemlerinin idaresi.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="miras" data-keywords="miras veraset tenkis vasiyetname muris muvazaası">
+                                <div class="card-icon"><i class="fa-solid fa-coins"></i></div>
+                                <h3>Miras Hukuku</h3>
+                                <p class="card-brief">Veraset ilamı, tenkis, mirastan mal kaçırma ve vasiyetname süreçleri.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="tuketici" data-keywords="tüketici hakem heyeti ayıplı mal sözleşme">
+                                <div class="card-icon"><i class="fa-solid fa-tags"></i></div>
+                                <h3>Tüketici Hukuku</h3>
+                                <p class="card-brief">Tüketici hakem heyeti başvuruları ve ayıplı mal/hizmet davaları.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="sirketler" data-keywords="şirketler ticaret genel kurul ana sözleşme">
+                                <div class="card-icon"><i class="fa-solid fa-building"></i></div>
+                                <h3>Şirketler Hukuku</h3>
+                                <p class="card-brief">Şirket kuruluşu, sözleşmelerin hazırlanması ve haksız rekabet davaları.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="bilisim" data-keywords="bilişim kvkk internet içerik kaldırma e-ticaret">
+                                <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                <h3>Bilişim ve KVKK</h3>
+                                <p class="card-brief">KVKK uyum projeleri, internetten içerik kaldırma ve e-ticaret hukuku.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="vergi" data-keywords="vergi ceza uzlaşma vergi ziyaı">
+                                <div class="card-icon"><i class="fa-solid fa-percent"></i></div>
+                                <h3>Vergi Hukuku</h3>
+                                <p class="card-brief">Vergi cezalarının iptali, uzlaşma süreçleri ve vergi incelemelerinde temsil.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="saglik" data-keywords="sağlık doktor malpraktis hekim hatası hastane">
+                                <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                                <h3>Sağlık Hukuku</h3>
+                                <p class="card-brief">Hasta hakları, hekimin hukuki sorumluluğu ve tıbbi müdahale hataları.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+
+                            <div class="action-card" data-id="sigorta" data-keywords="sigorta tahkim poliçe hasar rücu">
+                                <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <h3>Sigorta Hukuku</h3>
+                                <p class="card-brief">Sigorta tahkim kurulu başvuruları, poliçe uyuşmazlıkları ve rücu davaları.</p>
+                                <span class="card-link">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- HESAPLAMA ARAÇLARI -->
+                    <section id="hesaplamalar" class="section-block">
+                        <div class="section-title">
+                            <div class="bar"></div>
+                            <div>
+                                <h2>Hukuki Hesaplama Araçları</h2>
+                                <p class="section-subtitle-sm">Dava harçları, tazminatlar ve arabuluculuk masraflarınızı hesaplayın.</p>
+                            </div>
+                        </div>
+
+                        <div class="calc-grid">
+                            <div class="calc-card dedicated-highlight" data-calc="harc">
+                                <div class="calc-card-top">
+                                    <div class="calc-icon"><i class="fa-solid fa-scale-unbalanced"></i></div>
+                                    <span class="tool-tag">Özel Sayfa</span>
+                                </div>
+                                <div class="calc-content">
+                                    <h4>Dava Harcı & Gider Avansı</h4>
+                                    <p>Mahkeme türüne göre peşin harç, başvuru harcı, tebligat, bilirkişi ve keşif avansını hesaplayın.</p>
+                                </div>
+                                <button class="calc-btn-sm">Aç & Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card dedicated-highlight" data-calc="arac">
+                                <div class="calc-card-top">
+                                    <div class="calc-icon"><i class="fa-solid fa-car-burst"></i></div>
+                                    <span class="tool-tag">Özel Sayfa</span>
+                                </div>
+                                <div class="calc-content">
+                                    <h4>Araç Değer Kaybı Hesaplama</h4>
+                                    <p>Trafik kazası sonrası aracınızda oluşan değer kaybını ve sigortadan alınabilecek net tutarı hesaplayın.</p>
+                                </div>
+                                <button class="calc-btn-sm">Aç & Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card dedicated-highlight" data-calc="yillik">
+                                <div class="calc-card-top">
+                                    <div class="calc-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                                    <span class="tool-tag">Özel Sayfa</span>
+                                </div>
+                                <div class="calc-content">
+                                    <h4>Yıllık İzin Ücreti Hesaplama</h4>
+                                    <p>Kullanılmayan yıllık izin sürelerinizin güncel mevzuata göre brüt/net ücretini hesaplayın.</p>
+                                </div>
+                                <button class="calc-btn-sm">Aç & Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="mesai">
+                                <div class="calc-icon"><i class="fa-solid fa-business-time"></i></div>
+                                <div class="calc-content">
+                                    <h4>Fazla Mesai Ücreti Hesaplama</h4>
+                                    <p>Haftalık 45 saati aşan çalışmalarınız için hak ettiğiniz mesai ücretini bulun.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="ihbar">
+                                <div class="calc-icon"><i class="fa-solid fa-file-signature"></i></div>
+                                <div class="calc-content">
+                                    <h4>İhbar Tazminatı Hesaplama</h4>
+                                    <p>Kıdem sürenize göre işten ayrılma/çıkarılma ihbar süre ve tazminatınız.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="infaz">
+                                <div class="calc-icon"><i class="fa-solid fa-link-slash"></i></div>
+                                <div class="calc-content">
+                                    <h4>İnfaz Hesaplama Aracı</h4>
+                                    <p>Ceza miktarınıza göre yatar hesaplaması ve denetimli serbestlik süresi.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="kidem">
+                                <div class="calc-icon"><i class="fa-solid fa-calculator"></i></div>
+                                <div class="calc-content">
+                                    <h4>Kıdem Tazminatı Hesaplama</h4>
+                                    <p>Brüt maaş ve çalışma süreniz üzerinden net kıdem tazminatınızı belirleyin.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="haftalik">
+                                <div class="calc-icon"><i class="fa-regular fa-calendar-days"></i></div>
+                                <div class="calc-content">
+                                    <h4>Hafta Tatili Ücreti Hesaplama</h4>
+                                    <p>Kullandırılmayan hafta tatillerine ait yasal ücret alacağınızı hesaplayın.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="bayram">
+                                <div class="calc-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                                <div class="calc-content">
+                                    <h4>UBGT Ücreti Hesaplama</h4>
+                                    <p>Ulusal Bayram ve Genel Tatil günlerinde yapılan çalışmaların hesaplaması.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="isgucu">
+                                <div class="calc-icon"><i class="fa-solid fa-heart-crack"></i></div>
+                                <div class="calc-content">
+                                    <h4>İş Gücü Kaybı Hesaplama</h4>
+                                    <p>Kaza sonucu oluşan sürekli sakatlık (maluliyet) tazminat ön hesaplaması.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="issizlik">
+                                <div class="calc-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                                <div class="calc-content">
+                                    <h4>İşsizlik Maaşı Hesaplama</h4>
+                                    <p>Son prime esas kazancınıza göre işsizlik ödeneği tutarı ve süresi.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="arabulucu-calc">
+                                <div class="calc-icon"><i class="fa-solid fa-handshake"></i></div>
+                                <div class="calc-content">
+                                    <h4>Arabuluculuk Ücreti Hesaplama</h4>
+                                    <p>Uyuşmazlık bedeli üzerinden Arabuluculuk Asgari Ücret Tarifesi hesabı.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="faiz-calc">
+                                <div class="calc-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div class="calc-content">
+                                    <h4>Yasal & Ticari Faiz Hesaplama</h4>
+                                    <p>Alacağınızın türüne göre yasal temerrüt veya ticari avans faizi hesaplaması.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+
+                            <div class="calc-card" data-calc="smm-calc">
+                                <div class="calc-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                                <div class="calc-content">
+                                    <h4>Serbest Meslek Makbuzu (SMM)</h4>
+                                    <p>Brüt avukatlık ücreti üzerinden KDV, Stopaj ve Net ödenecek tutar hesabı.</p>
+                                </div>
+                                <button class="calc-btn-sm">Hesapla <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- EKİBİMİZ BÖLÜMÜ -->
+                    <section id="ekip" class="section-block team-section">
+                        <div class="section-title">
+                            <div class="bar"></div>
+                            <div>
+                                <h2>Kurucu Ekibimiz</h2>
+                                <p class="section-subtitle-sm">Kocaeli Üniversitesi Hukuk Fakültesi mezunu dinamik ve yetkin kadro</p>
+                            </div>
+                        </div>
+                        
+                        <div class="team-grid">
+                            <div class="team-card glow-on-hover">
+                                <div class="team-avatar"><i class="fa-solid fa-handshake"></i></div>
+                                <div class="team-info">
+                                    <h3>Arb. Bilal YURDUSEVEN</h3>
+                                    <span class="team-role">Kurucu Ortak / Uzman Arabulucu</span>
+                                    <p class="team-desc">Kocaeli Üniversitesi Hukuk Fakültesi mezunudur. Büromuz bünyesinde dava süreçlerinden bağımsız olarak sadece arabuluculuk faaliyetlerini yürütmektedir. İş, ticaret ve tüketici uyuşmazlıklarında uzman arabulucu olarak görev yapmakta, tarafsızlık ilkesiyle uyuşmazlıkları kısa sürede çözüme kavuşturmaktadır.</p>
+                                    <div class="team-contact">
+                                        <a href="tel:+905524093844"><i class="fa-solid fa-phone"></i> +90 552 409 38 44</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-card glow-on-hover">
+                                <div class="team-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="team-info">
+                                    <h3>Av. Anas ELAHMED</h3>
+                                    <span class="team-role">Kurucu Avukat / Yabancılar Hukuku Uzmanı</span>
+                                    <p class="team-desc">Kocaeli Üniversitesi Hukuk Fakültesi mezunudur. Büromuzun profesyonel avukatlık departmanını yönetmektedir. Ağırlıklı olarak Yabancılar Hukuku, vatandaşlık işlemleri ve deport iptal davaları üzerinde çalışmakla birlikte; ceza, iş ve icra gibi tüm temel hukuk alanlarında dava vekilliği yapmaktadır.</p>
+                                    <div class="team-contact">
+                                        <a href="tel:+905372968720"><i class="fa-solid fa-phone"></i> +90 537 296 87 20</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SIKÇA SORULAN SORULAR -->
+                    <section id="sss" class="section-block">
+                        <div class="section-title">
+                            <div class="bar"></div>
+                            <div>
+                                <h2>Sıkça Sorulan Sorular</h2>
+                                <p class="section-subtitle-sm">Müvekkillerimizin en çok merak ettiği hukuki süreçler</p>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">Arabuluculuk nedir, davadan farkı nedir? <i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="faq-answer">
+                                    <p>Arabuluculuk, uyuşmazlık yaşayan tarafların tarafsız bir üçüncü kişi (arabulucu) eşliğinde bir araya gelerek sorunlarını kendi iradeleriyle çözdükleri bir alternatif çözüm yöntemidir. Davaya göre çok daha hızlı, ekonomik ve gizlidir. İmzalanan anlaşma belgesi mahkeme ilamı hükmündedir.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Yabancılar Hukuku alanında hangi hizmetleri veriyorsunuz? <i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="faq-answer">
+                                    <p>Yabancıların Türkiye'de oturma (ikamet) izni alması, çalışma izni süreçleri, Türk vatandaşlığına geçiş başvuruları, gayrimenkul edinim süreçleri ve haksız deport (sınır dışı) kararlarının idare mahkemelerinde iptali davalarını yürütmekteyiz.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Avukatlık ücretleri neye göre belirlenir? <i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="faq-answer">
+                                    <p>Avukatlık ücretleri, Türkiye Barolar Birliği tarafından her yıl yayımlanan Avukatlık Asgari Ücret Tarifesi'nin (AAÜT) altında olmamak kaydıyla; davanın türüne, dosyanın iş yüküne, harcanacak mesaiye ve hukuki uyuşmazlığın değerine göre karşılıklı anlaşılarak belirlenir.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Hukuki danışmanlık ücretli midir? <i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="faq-answer">
+                                    <p>Evet, Avukatlık Kanunu uyarınca sözlü, yazılı veya online ortamda verilen hukuki danışmanlık hizmetleri ücrete tabidir. Dosyanızın incelenmesi ve yol haritası çizilmesi profesyonel bir mesai gerektirmektedir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- SAĞ KOLON: SABİT FORM VE HIZLI BUTONLAR -->
+                <aside class="sidebar-col" id="iletisim">
+                    <div class="sidebar-sticky">
+                        
+                        <!-- HUKUKİ DANIŞMA FORMU -->
+                        <div class="form-box">
+                            <div class="form-header">
+                                <div class="form-bar"></div>
+                                <h3>Hukuki Danışma Formu</h3>
+                            </div>
+                            <p class="form-desc">Hukuki sorunuzu veya arabuluculuk talebinizi iletin, uzman ekibimiz en kısa sürede dönüş sağlasın.</p>
+                            
+                            <form id="contactForm" class="contact-form">
+                                <div class="input-group">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" id="cName" class="form-input" placeholder="Adınız ve Soyadınız" required>
+                                </div>
+                                <div class="input-group">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="tel" id="cPhone" class="form-input" placeholder="Telefon (05xx xxx xx xx)" required>
+                                </div>
+                                <div class="input-group">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" id="cEmail" class="form-input" placeholder="E-Posta Adresiniz (İsteğe Bağlı)">
+                                </div>
+                                <div class="input-group">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <select id="cSubject" class="form-input" required>
+                                        <option value="" disabled selected>Konu / Departman Seçiniz...</option>
+                                        <option value="Arabuluculuk (Arb. Bilal Yurduseven)">Arabuluculuk Talebi (Arb. Bilal Y.)</option>
+                                        <option value="Yabancılar Hukuku (Av. Anas Elahmed)">Yabancılar Hukuku (Av. Anas E.)</option>
+                                        <option value="Dava Harçları ve Yargılama">Dava Harçları & Masraf Avansı</option>
+                                        <option value="Araç Değer Kaybı ve Sigorta">Araç Değer Kaybı & Sigorta Tahkim</option>
+                                        <option value="Ceza Hukuku">Ceza Hukuku Danışmanlığı</option>
+                                        <option value="İş Hukuku">İş Hukuku / Yıllık İzin / Tazminat</option>
+                                        <option value="Gayrimenkul ve İcra">Gayrimenkul, Tahliye ve İcra</option>
+                                        <option value="Diğer Hukuki Süreçler">Diğer Hukuki Süreçler</option>
+                                    </select>
+                                </div>
+                                <div class="input-group textarea-group">
+                                    <i class="fa-solid fa-message"></i>
+                                    <textarea id="cMessage" class="form-input" placeholder="Sorununuzu veya dosya özetini buraya yazınız..." required></textarea>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="kvkk" required checked>
+                                    <label for="kvkk">KVKK Aydınlatma Metni'ni ve Gizlilik Politikası'nı okudum, kabul ediyorum.</label>
+                                </div>
+                                <button type="submit" class="btn-form-submit">
+                                    Formu Güvenle Gönder <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </form>
+                            <p class="form-footer-note"><i class="fa-solid fa-lock"></i> Tüm bilgileriniz mesleki sır kapsamında gizli tutulmaktadır.</p>
+                        </div>
+
+                        <!-- HIZLI İLETİŞİM BUTONLARI -->
+                        <div class="sidebar-buttons">
+                            <a href="https://wa.me/905524093844?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum,%20hukuki%20dan%C4%B1%C5%9Fmanl%C4%B1k%20almak%20istiyorum." target="_blank" class="side-btn btn-whatsapp">
+                                <div class="side-btn-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div class="side-btn-content">
+                                    <span>7 GÜN 24 SAAT DOĞRUDAN İLETİŞİM</span>
+                                    <strong>WhatsApp Danışma Hattı</strong>
+                                </div>
+                                <div class="side-btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                            </a>
+
+                            <a href="javascript:void(0)" onclick="navigateToSection('iletisim')" class="side-btn btn-randevu-action" id="btnSideRandevu">
+                                <div class="side-btn-icon"><i class="fa-solid fa-headset"></i></div>
+                                <div class="side-btn-content">
+                                    <span>HIZLI VE KOLAY PLANLAMA</span>
+                                    <strong>Online Randevu Al</strong>
+                                </div>
+                                <div class="side-btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                            </a>
+
+                            <a href="javascript:void(0)" onclick="navigateToSection('iletisim')" class="side-btn btn-ask-action" id="btnSideSor">
+                                <div class="side-btn-icon"><i class="fa-solid fa-comments"></i></div>
+                                <div class="side-btn-content">
+                                    <span>HUKUKİ İNCELEME</span>
+                                    <strong>Uzman Avukata Sor</strong>
+                                </div>
+                                <div class="side-btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </main>
+    </div> <!-- /#home-view -->
+
+
+    <!-- =======================================================
+         B. DEDİKE ARAÇ SAYFASI GÖRÜNÜMÜ (TOOL DEDICATED VIEW)
+         ======================================================= -->
+    <div id="tool-detail-view" style="display: none;">
+        <div class="tool-page-header">
+            <div class="tool-page-header-inner">
+                <button onclick="navigateToHome()" class="btn-back-home"><i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön</button>
+                <div class="breadcrumbs">
+                    <a href="javascript:void(0)" onclick="navigateToHome()">Ana Sayfa</a> / 
+                    <a href="javascript:void(0)" onclick="navigateToSection('hesaplamalar')">Hesaplama Araçları</a> / 
+                    <span id="toolBreadcrumbCurrent">Hesaplama Aracı</span>
+                </div>
+            </div>
+        </div>
+
+        <main class="main-wrapper">
+            <div class="content-container">
+                <!-- Sol Kolon: Canlı Hesaplayıcı + Tam Kapsamlı Makale + Dilekçeler -->
+                <div class="content-left" id="toolArticleContainer">
+                    <!-- JavaScript tarafından dinamik doldurulur -->
+                </div>
+
+                <!-- Sağ Kolon: Sticky Danışma Formu -->
+                <aside class="sidebar-col">
+                    <div class="sidebar-sticky">
+                        <div class="form-box">
+                            <div class="form-header">
+                                <div class="form-bar"></div>
+                                <h3>Avukata Danışın</h3>
+                            </div>
+                            <p class="form-desc">Hesaplanan tutarlar veya dava/tahkim süreçleriniz için avukatlarımızla hemen iletişime geçin.</p>
+                            
+                            <form id="toolContactForm" class="contact-form">
+                                <div class="input-group">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" id="tName" class="form-input" placeholder="Adınız ve Soyadınız" required>
+                                </div>
+                                <div class="input-group">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="tel" id="tPhone" class="form-input" placeholder="Telefon Numaranız" required>
+                                </div>
+                                <div class="input-group textarea-group">
+                                    <i class="fa-solid fa-message"></i>
+                                    <textarea id="tMessage" class="form-input" placeholder="Uyuşmazlık detaylarınızı buraya yazınız..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-form-submit">
+                                    Danışma Talebini İlet <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="sidebar-buttons">
+                            <a href="https://wa.me/905524093844?text=Merhaba,%20hesaplama%20arac%C4%B1n%C4%B1z%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum,%20dan%C4%B1%C5%9Fmanl%C4%B1k%20almak%20istiyorum." target="_blank" class="side-btn btn-whatsapp">
+                                <div class="side-btn-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div class="side-btn-content">
+                                    <span>7/24 DANIŞMA</span>
+                                    <strong>WhatsApp ile Danış</strong>
+                                </div>
+                                <div class="side-btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div> <!-- /#tool-detail-view -->
+
+
+    <!-- 5. ÇOKLU KOLONLU GENİŞ FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <!-- Kolon 1: İletişim -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <span class="f-logo-main">BİLEN</span>
+                    <span class="f-logo-sub">HUKUK & ARABULUCULUK</span>
+                </div>
+                <p>İstanbul Fatih merkezli büromuz, dava şartı arabuluculuk hizmetleri ve tam kapsamlı avukatlık süreçlerinde güvene dayalı çözüm ortaklığınızdır.</p>
+                
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Fatih / İstanbul</li>
+                    <li><i class="fa-solid fa-phone"></i> Arb. Bilal YURDUSEVEN: +90 552 409 38 44</li>
+                    <li><i class="fa-solid fa-phone"></i> Av. Anas ELAHMED: +90 537 296 87 20</li>
+                    <li><i class="fa-solid fa-envelope"></i> b_ysvn@hotmail.com</li>
+                </ul>
+            </div>
+
+            <!-- Kolon 2: Kurumsal Menü -->
+            <div class="footer-col">
+                <h4>Kurumsal</h4>
+                <ul class="footer-nav">
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('hakkimizda')"><i class="fa-solid fa-angle-right"></i> Büromuz Hakkında</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('ekip')"><i class="fa-solid fa-angle-right"></i> Kurucu Ekibimiz</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('alanlar')"><i class="fa-solid fa-angle-right"></i> Faaliyet Alanları</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('sss')"><i class="fa-solid fa-angle-right"></i> Sıkça Sorulan Sorular</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('iletisim')"><i class="fa-solid fa-angle-right"></i> İletişim ve Konum</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolon 3: Uzmanlık Alanları -->
+            <div class="footer-col">
+                <h4>Uzmanlık Alanları</h4>
+                <ul class="footer-nav">
+                    <li><a href="javascript:void(0)" onclick="openModalById('yabancilar')"><i class="fa-solid fa-angle-right"></i> Yabancılar Hukuku</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('arabuluculuk')"><i class="fa-solid fa-angle-right"></i> Uzman Arabuluculuk</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('tazminat')"><i class="fa-solid fa-angle-right"></i> Tazminat & Sigorta</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('ceza')"><i class="fa-solid fa-angle-right"></i> Ceza & Ağır Ceza</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('is')"><i class="fa-solid fa-angle-right"></i> İş Hukuku Davaları</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('gayrimenkul')"><i class="fa-solid fa-angle-right"></i> Gayrimenkul & Tahliye</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('icra')"><i class="fa-solid fa-angle-right"></i> İcra ve Haciz Takipleri</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolon 4: Hesaplama Araçları -->
+            <div class="footer-col">
+                <h4>Hesaplama Araçları</h4>
+                <ul class="footer-nav">
+                    <li><a href="javascript:void(0)" onclick="openToolPage('harc')"><i class="fa-solid fa-angle-right"></i> Dava Harcı Hesaplama</a></li>
+                    <li><a href="javascript:void(0)" onclick="openToolPage('arac')"><i class="fa-solid fa-angle-right"></i> Araç Değer Kaybı Hesaplama</a></li>
+                    <li><a href="javascript:void(0)" onclick="openToolPage('yillik')"><i class="fa-solid fa-angle-right"></i> Yıllık İzin Ücreti Hesaplama</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('arabulucu-calc')"><i class="fa-solid fa-angle-right"></i> Arabuluculuk Ücreti Hesapla</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('smm-calc')"><i class="fa-solid fa-angle-right"></i> S. Meslek Makbuzu Hesapla</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('kidem-calc')"><i class="fa-solid fa-angle-right"></i> Kıdem Tazminatı Hesapla</a></li>
+                    <li><a href="javascript:void(0)" onclick="openModalById('faiz-calc')"><i class="fa-solid fa-angle-right"></i> Yasal Faiz Hesapla</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bilen Hukuk & Arabuluculuk Bürosu. Tüm hakları saklıdır.</p>
+            <p>Sitemizdeki içerikler Türkiye Barolar Birliği Reklam Yasağı Yönetmeliği'ne uygun hazırlanmıştır.</p>
+        </div>
+    </footer>
+
+    <!-- 6. SABİT ALT AKSİYON ÇUBUĞU (MOBİL) -->
+    <div class="fixed-action-bar">
+        <a href="https://wa.me/905524093844" target="_blank" class="fab-btn fab-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#iletisim" class="fab-btn fab-randevu">
+            <i class="fa-regular fa-calendar-check"></i> Randevu
+        </a>
+        <a href="tel:+905524093844" class="fab-btn fab-ara">
+            <i class="fa-solid fa-phone"></i> Ara
+        </a>
+    </div>
+
+    <!-- 7. MODAL (POPUP) -->
+    <div class="modal-overlay" id="appModal">
+        <div class="modal-dialog">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Kapat">&times;</button>
+            <div class="modal-header">
+                <div class="modal-badge-icon" id="modalIcon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div>
+                    <h3 id="modalTitle">Modal Başlık</h3>
+                    <span class="modal-subtitle" id="modalSubtitle">Bilen Hukuk & Arabuluculuk</span>
+                </div>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- 8. TOAST BİLDİRİMİ -->
+    <div class="toast-box" id="toastBox">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">İşlem başarıyla tamamlandı.</span>
+    </div>
+
+    <!-- 9. ÇEVİRİ MOTORU ENTEGRASYONU -->
+    <div id="google_translate_element" style="position:absolute; left:-9999px; top:-9999px; visibility:hidden;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'tr',
+                includedLanguages: 'tr,en,ar,de,fr,ru,fa,es',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- JS DOSYASI -->
+    <script src="js/main.js"></script>
+</body>
+</html>
